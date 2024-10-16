@@ -27,7 +27,7 @@ function main(email) {
       (dotIndex-atIndex) >=4 &&
       (lastIndex - dotIndex) >=2  )
       {
-          result = `${email} welcome `;
+          result = `welcome ${email}  `;
       }
       else{
           result = "invalid email";
