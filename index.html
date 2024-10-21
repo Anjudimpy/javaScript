@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="user_authentication.js"></script>
+</head>
+<body>
+   <!-- <h1 id="title">Hello World</h1> 
+   <button class="btn">Click Me!!</button> -->
+   <input type="text" id="new-input">
+   <button id="btn">Add</button>
+   <ul id="list">
+    <li>Go to MARKET</li>
+   </ul>
+
+   <script>
+    // const heading = document.getElementById("title");
+    // const button = document.getElementsByClassName("btn");
+
+    // button[0].addEventListener("click", function(){
+    //         heading.style.color="red";
+    // });
+
+    const button = document.getElementById('btn');
+    const input = document.getElementById("new-input");
+
+    button.addEventListener("click", function(){
+        const currentValue = input.value;
+        if(currentValue.trim() !== ""){
+            const li =document.createElement("li");
+            li.textContent = currentValue;
+
+            const listItem = document.getElementById("list");
+            listItem.appendChild(li);
+            input.value = "";
+          
+        }else{
+            alert("Please add somthing");
+        }
+
+
+    });
+   </script>
+</body>
+</html>
