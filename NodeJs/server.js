@@ -5,7 +5,17 @@ const http = require('http');
 
 //2. Create Server.
 const server =  http.createServer((req, res) =>{
-    res.end("Welcome to NodeJS Server");
+
+    console.log(req.url);
+    res.write('Welcome to my application')
+   if(req.url == '/product'){
+    //request ends
+    res.end("This is product page");
+   }
+   else if(req.url == '/user'){
+    res.end('This is User page');
+   }
+  //loging
 });
 
 //3. Specify a port to listen to client's requests.
