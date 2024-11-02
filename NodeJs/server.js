@@ -20,6 +20,6 @@ const server =  http.createServer((req, res) =>{
 
 //3. Specify a port to listen to client's requests.
 server.listen(3100, ()=>{
-    console.log('Server is listning on port 3100');
+    console.log('Server is listning on port 3100 .');
 });
 
