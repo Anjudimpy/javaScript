@@ -3,8 +3,11 @@ import ProductController from './src/controllers/product.controller.js';
 import ejsLayouts from 'express-ejs-layouts'
 import path from 'path';
 import validateRequest from './src/middlewares/validation.middleware.js';
+import { uploadFile } from './src/middlewares/file-upload.middlewere.js';
 
 const server = express();
+
+server.use(express.static('public'));
 
 // parse from data
 server.use(express.urlencoded({extended:true}))
@@ -19,9 +22,9 @@ server.use(ejsLayouts)
 const productController = new ProductController(); 
 server.get('/', (productController.getProducts));
 server.get('/new', productController.getAddForm);
-server.post('/', validateRequest, productController.addNewProduct);
+server.post('/', uploadFile.single('imageUrl'), validateRequest, productController.addNewProduct);
 server.get('/update-product/:id', productController.getUpdateProductView);
-server.get('/delete-product/:id', productController.deleteProduct);
+server.post('/delete-product/:id', productController.deleteProduct);
 server.post('/update-product', productController.postUpdateProduct);
 
 server.use(express.static('src/views'));
