@@ -26,4 +26,6 @@ class VehicleCl {
 }
 
 const car1 = new VehicleCl("Audi",'red', 4,45556);
+car1.name = 'asa';
+//car1.#regNumber = 987 // can't access outside ..this is private member
 car1.getDetails();
