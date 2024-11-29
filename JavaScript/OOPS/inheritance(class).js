@@ -1,3 +1,5 @@
+//Inheritance in Class.....
+
 class Vehical {
     constructor(name, color, wheel){
         this.name = name;
