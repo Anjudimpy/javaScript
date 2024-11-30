@@ -3,11 +3,11 @@ class Circle{
         this.radius = radius;
     }
 
-    get diameter(){
+    get diameter(){ // get should not have parameter
         return this.radius*2;
     }
 
-    set diameter(newDiameter) {
+    set diameter(newDiameter) { // set should have atleast one parameter
         if(newDiameter >= 0){
           this.radius = newDiameter/2;
         }else{
