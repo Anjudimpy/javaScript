@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(16, 15, 15);
+    overflow-x: hidden;
+}
+tbody tr, td{
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+table {
+    margin: 1rem;
+}
+
+body h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+#summary-head{
+    margin: 1rem;
+}
+.stock-container {
+    width: 100%;
+    color: white;
+    display: flex;
+    padding: 1rem;
+}
+.chart-container {
+    width: 60%;
+    margin: 1rem;
+}
+#myChart {
+    background-color: rgba(168, 194, 252, 0.808);
+    box-shadow: 2px  5px 5px rgb(70, 70, 243);
+
+}
+.company-list {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    margin-left: 4rem;
+}
+.company-btn{
+    padding: 5px;
+    width: 5rem;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 1rem;
+    gap: 10px; 
+}
+.button-container button{
+    background-color: blue;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.graph-button{
+     width: 100%;
+     display: flex;
+     justify-content: space-evenly;
+     margin: 2rem 0rem;
+}
+.graph-button button{
+    width: 7rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+}
+#summary-text{
+    font-size: 14px;
+    text-align: justify;
+}

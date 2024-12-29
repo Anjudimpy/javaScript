@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Stock Market Analysis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Market Analysis</h1>
+
+        <div class="stock-container">
+            <!-- Chart Section -->
+            <div class="chart-container">
+                <canvas id="myChart" style="width:100%;"></canvas>
+                <div class="graph-button">
+                    <button id="btn1mo">1 Month</button>
+                    <button id="btn3mo">3 Months</button>
+                    <button id="btn1y">1 Year</button>
+                    <button id="btn5y">5 Years</button>
+                </div>
+                <div class="company-summary">
+                    <div id="summary-head" style="display: flex; gap: 2rem; font-weight: bold; font-size: 1.2rem;">
+                        <p class="company_name"></p>
+                        <p class="company_profit"></p>
+                        <p class="company_value"></p>
+                    </div>
+                    <p id="summary-text"> </p>
+                </div>
+            </div>
+
+            <!-- Company List Section -->
+            <div class="company-list">
+                <div>
+                    <table id="company-table">
+                        <thead>
+                           
+                        </thead>
+                        <tbody>
+                            <!-- Rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+               </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

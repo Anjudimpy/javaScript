@@ -29,17 +29,15 @@
     button.addEventListener("click", function(){
         const currentValue = input.value;
         if(currentValue.trim() !== ""){
-            const li =document.createElement("li");
+            const li = document.createElement("li");
             li.textContent = currentValue;
-
             const listItem = document.getElementById("list");
             listItem.appendChild(li);
             input.value = "";
           
         }else{
             alert("Please add somthing");
-        }
-
+       }
 
     });
    </script>
